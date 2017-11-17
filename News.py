@@ -24,13 +24,14 @@ def count_word(original_text):
             if letter_count == s:
                 count += 1
         words_value[letter_count] = count
+        return words_value
 
-    return words_value
 
 def sort_top(words_value):
     sorted_count_pairs = sorted(words_value.items(), key=lambda x: x[1], reverse=True)
     top10 = sorted_count_pairs[:10]
     for word, freq in top10:
+
         print("Слово {} выстретилось {} раз".format(word, freq))
 
 
